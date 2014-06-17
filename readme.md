@@ -77,9 +77,9 @@ $goalIndexHandler = function ($score1, $score2) {
 };
 
 $homeCorrectionHandler = function ($home, Player $player1, Player $player2) {
-    $coef = 100;
+    $coefficient = 100;
     if ($home) {
-        ${'player' . $home}->setRating(${'player' . $home}->getRating() + $coef);
+        ${'player' . $home}->setRating(${'player' . $home}->getRating() + $coefficient);
     }
 };
 
@@ -96,6 +96,7 @@ $player2 = $match->getPlayer2();
 
 $newRating1 = $player1->getRating();
 $newRating2 = $player2->getRating();
+```
 
 ## Info
 
