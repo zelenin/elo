@@ -1,6 +1,6 @@
 {
 	"name": "zelenin/elo",
-	"description": "Elo rating",
+	"description": "A PHP implementation of Elo rating system",
 	"version": "0.0.1",
 	"type": "library",
 	"keywords": ["elo", "rating", "ranking"],
