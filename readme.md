@@ -100,7 +100,7 @@ $newRating2 = $player2->getRating();
 
 ## Info
 
-See wiki about [Elo rating system](http://en.wikipedia.org/wiki/Elo_rating_system)
+See Wiki about [Elo rating system](http://en.wikipedia.org/wiki/Elo_rating_system)
 
 ## Author
 
