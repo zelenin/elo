@@ -104,8 +104,8 @@ class Match
      */
     private function getExpectedScore()
     {
-        $this->getHomeCorrection();
         $diff = $this->player2->getRating() - $this->player1->getRating();
+        $diff = $this->getHomeCorrection($diff);
         return 1 / (1 + pow(10, ($diff / 400)));
     }
 
@@ -143,12 +143,12 @@ class Match
     /**
      * @return float
      */
-    private function getHomeCorrection()
+    private function getHomeCorrection($diff)
     {
         if (is_callable($this->homeCorrectionHandler)) {
-            return call_user_func($this->homeCorrectionHandler, $this->home, $this->player1, $this->player2);
+            return call_user_func($this->homeCorrectionHandler, $this->home, $diff);
         }
-        return 0;
+        return $diff;
     }
 
     /**

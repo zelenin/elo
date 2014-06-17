@@ -77,11 +77,15 @@ $goalIndexHandler = function ($score1, $score2) {
     return 1;
 };
 
-$homeCorrectionHandler = function ($home, Player $player1, Player $player2) {
+$homeCorrectionHandler = function ($home, $diff) {
     $coefficient = 100;
-    if ($home) {
-        ${'player' . $home}->setRating(${'player' . $home}->getRating() + $coefficient);
+    if ($home == 1) {
+        return $diff - $coefficient;
     }
+    if ($home == 2) {
+        return $diff + $coefficient;
+    }
+    return $diff;
 };
 
 $match = new Match($player1, $player2);
