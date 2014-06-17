@@ -96,9 +96,6 @@ $match->setScore(1, 0)
     ->setHomeCorrectionHandler($homeCorrectionHandler)
     ->count();
 
-$player1 = $match->getPlayer1();
-$player2 = $match->getPlayer2();
-
 $newRating1 = $player1->getRating();
 $newRating2 = $player2->getRating();
 ```
