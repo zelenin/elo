@@ -56,8 +56,9 @@ Get new ratings:
 ```php
 $newRating1 = $player1->getRating();
 $newRating2 = $player2->getRating();
+```
 
-## Advanced usage
+### Advanced usage
 
 If you want use this library for not-traditional for Elo sports like football, ice hockey, basketball, you may set additional handlers for setting goal index and home correction.
 
